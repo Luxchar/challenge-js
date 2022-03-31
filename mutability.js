@@ -1,5 +1,11 @@
-const clone1 = {
-    name: person.name,
+
+ const person = {
+   name: 'Rick',
+   age: 77,
+   country: 'US',
+ }
+
+const clone1 = {name: person.name,
     age: person.age+1,
     country: 'FR'
  };
@@ -14,7 +20,7 @@ const clone1 = {
  
  const samePerson = {
     name: person.name,
-    age: person.age,
-    country: person.country
- };
+    age: person.age+1,
+    country: 'FR'
+ }; 
   
