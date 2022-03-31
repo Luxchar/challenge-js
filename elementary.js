@@ -1,4 +1,7 @@
 function multiply(a, b){
+    if (b < 0) { //negative handling
+        return 0
+    }
     return ("i").repeat(a).repeat(b).length    
 }
 
