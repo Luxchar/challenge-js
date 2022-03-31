@@ -1,0 +1,2 @@
+biggie = Infinity;
+smalls = -Infinity;
