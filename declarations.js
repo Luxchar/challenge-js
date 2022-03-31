@@ -6,6 +6,7 @@ const nested = {
     obj: {
        str:"limousine",
        num:5,
-       bool:true 
+       bool:true
     }
  };
+Object.freeze(obj);
