@@ -1,7 +1,15 @@
 function multiply(x, y) {
     let result = 0;
+    negative = false;
+    if (x < 0) {
+        x = -x;
+        negative = true;
+    }
     for (let i = 0; i < y; i++) {
         result += x;
+    }
+    if (negative) {
+        return -result;
     }
   return result;
 }
