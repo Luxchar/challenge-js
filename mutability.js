@@ -1,10 +1,3 @@
-
- const person = {
-   name: 'Rick',
-   age: 77,
-   country: 'US',
- }
-
 const clone1 = {name: person.name,
     age: person.age+1,
     country: 'FR'
