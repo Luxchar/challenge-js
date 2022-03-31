@@ -4,15 +4,25 @@ const clone1 = {
     country: 'FR'
  };
  Object.freeze(clone1);
+
  const clone2 = {
     name: person.name,
     age: person.age+1,
     country: 'FR'
  };
  Object.freeze(clone2);
+ 
  const samePerson = {
     name: person.name,
     age: person.age,
     country: person.country
  };
+
+ const person = {
+    name: 'Rick',
+    age: 77,
+    country: 'US'
+  };
+
+  console.log(samePerson)
   
