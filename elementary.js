@@ -20,23 +20,22 @@ function divide(a, b) {
       return (result - 1) * sign;
 }
 
-function modulo(x, y) {
-    if(x === 0){
-        return 0;
-        }
-    if(y === 0){
-        return NaN;
+function modulo(a,b) {
+    let negative = false
+    if (a < 0) { //negative handling
+        a = -a
+        negative = true
     }
-
-   var newNum1 = Math.abs(x);
-   var newNum2 = Math.abs(y);
-
-   var quot = newNum1 - Math.floor( newNum1 / newNum2 ) * newNum2 ;
-
-   if(x < 0){
-         return -(quot);
-   }
-   else{
-         return quot;
-   }
+    if (b < 0) { //negative handling
+        b = -b
+    }
+    let result = a
+    let bcopy = b
+    while (b < result) { //while we can still divide
+        result = result - bcopy //divide
+    }
+    if (negative) { //negative handling
+        return -result
+    }
+    return result //return rest of the division (modulo)
 }
