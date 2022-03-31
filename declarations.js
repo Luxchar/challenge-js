@@ -1,4 +1,4 @@
-const escapeStr = " `, \, /, \",' ";
+const escapeStr = "`,/,\",',\\";
 const arr = [4, '2'];
 const person = {str: "string",num: 5,bool: true,undef: undefined}; 
 const nested = {
@@ -9,3 +9,4 @@ const nested = {
        bool:true
     }
  }
+ console.log(escapeStr);
