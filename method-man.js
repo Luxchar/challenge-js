@@ -1,5 +1,5 @@
 function words(str) {
-    return str.split(/\s+/); 
+    return str.split(/(\s+)/);
 }
 
 function sentence(arr) {
@@ -17,4 +17,3 @@ function whisper(str) {
 function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
-
