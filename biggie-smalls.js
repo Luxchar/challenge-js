@@ -1,2 +1,2 @@
-biggie = Infinity;
-smalls = -Infinity;
+let biggie = Infinity;
+let smalls = -Infinity;
