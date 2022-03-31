@@ -4,9 +4,8 @@ const obj = {str: "string",num: 5,bool: true,undef: undefined};
 const nested = {
     arr:[4,undefined,'2'],
     obj: {
-       str:"limousine",
-       num:5,
-       bool:true
+        str: "stringe",
+        num: 15,
+        bool: false,
     }
  };
-Object.freeze(obj);
