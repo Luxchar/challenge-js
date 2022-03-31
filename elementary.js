@@ -17,7 +17,12 @@ function divide(a, b) {
         a -= b;
         result++;
       }
-      return (result - 1) * sign;
+      resultcopy = result
+      while (sign > 0) {
+        result += resultcopy;
+        sign-=1
+    }
+      return result - 1;
 }
 
 function modulo(a,b) {
