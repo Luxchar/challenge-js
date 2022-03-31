@@ -1,5 +1,5 @@
 function words(str) {
-    return str.split('');
+    return str.split(' ');
 }
 
 function sentence(arr) {
