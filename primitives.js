@@ -1,4 +1,4 @@
-const str = String;
-const num = Number;
-const bool = Boolean;
+const str = "string";
+const num = 5;
+const bool = true;
 const undef = undefined;
