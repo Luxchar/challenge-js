@@ -15,7 +15,15 @@ function divide(x, y) {
 }
 
 function modulo(x, y) {
-    q = x / y;  //finding quotient (integer part only)
-    p = q * y;  //finding product
-    return x - p;  //finding modulus
+    result = x;
+    for (let i = 0; i < y; i++) {//finding quotient (integer part only)
+        result -= x;
+    }
+    for (let i = 0; i < result; i++) {//finding product
+        result += y;
+    }
+    return x - result;//finding modulus
 }
+    // q = x / y;  
+    // p = q * y;  
+    // return x - p;  
