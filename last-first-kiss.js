@@ -5,5 +5,5 @@ function last(n) {
     return n[n.length-1];
   }
 function kiss(n) {
-    return last(n)+''+first(n);
+    return [last(n)+', '+first(n)];
   }
