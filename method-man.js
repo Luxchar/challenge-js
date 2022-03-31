@@ -2,7 +2,7 @@ function words(str) {
     return str.split(/\s+/); 
 }
 
-function words(arr) {
+function sentence(arr) {
     return arr.join(' ');
 }
 
