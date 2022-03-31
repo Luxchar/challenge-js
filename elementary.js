@@ -1,37 +1,42 @@
-function multiply(x, y) {
-    let result = 0;
-    negative = false;
-    if (x < 0) {
-        x = -x;
-        negative = true;
-    }
-    for (let i = 0; i < y; i++) {
-        result += x;
-    }
-    if (negative) {
-        return -result;
-    }
-  return result;
+function multiply(a, b){
+    return ("i").repeat(a).repeat(b).length    
 }
 
-function divide(x, y) {
-    let result = 0;
-    for (let i = 0; i < y; i++) {
-        result -= x;
-    }
-  return result;
+function divide(a, b) {
+      var sign = 1;
+      if (a < 0) {
+        a = -a;
+        sign = -sign;
+      }
+      if (b < 0) {
+        b = -b;
+        sign = -sign;
+      }
+      var result = 0;
+      while (a >= 0) {
+        a -= b;
+        result++;
+      }
+      return (result - 1) * sign;
 }
 
 function modulo(x, y) {
-    result = x;
-    for (let i = 0; i < y; i++) {//finding quotient (integer part only)
-        result -= x;
+    if(x === 0){
+        return 0;
+        }
+    if(y === 0){
+        return NaN;
     }
-    for (let i = 0; i < result; i++) {//finding product
-        result += y;
-    }
-    return x - result;//finding modulus
+
+   var newNum1 = Math.abs(x);
+   var newNum2 = Math.abs(y);
+
+   var quot = newNum1 - Math.floor( newNum1 / newNum2 ) * newNum2 ;
+
+   if(x < 0){
+         return -(quot);
+   }
+   else{
+         return quot;
+   }
 }
-    // q = x / y;  
-    // p = q * y;  
-    // return x - p;  
