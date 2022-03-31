@@ -17,12 +17,4 @@ const clone1 = {
     age: person.age,
     country: person.country
  };
-
- const person = {
-    name: 'Rick',
-    age: 77,
-    country: 'US'
-  };
-
-  console.log(samePerson)
   
