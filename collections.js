@@ -1,6 +1,6 @@
 let arrToSet = (arg) => new Set(arg);
 let arrToStr = (arg) => arg.join('');
-let setToArr = (arg) => Array.from(set);
+let setToArr = (arg) => Array.from(arg);
 let setToStr = (arg) => Array.from(arg).join(' ');
 let strToArr = (arg) => arg.split("");
 let strToSet = (arg) => [...arg].join(' ');
