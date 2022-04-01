@@ -52,5 +52,5 @@ function trunc(nb){
         return nb
     }
 
-    return nb <= 0 ? nb * -1 % 1 > 0.5 ? round(nb) + 1 : round(nb) : nb % 1 >= 0.5 ? round(nb) - 1 : round(nb)
+    return nb <= 0 ? nb * -1 % 1 > 0.5 ? round(nb) + 2 : round(nb) : nb % 1 >= 0.5 ? round(nb) - 1 : round(nb)
 }
