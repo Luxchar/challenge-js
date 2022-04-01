@@ -44,7 +44,13 @@ function floor(nb){
         nb *= -1
     }
 
-    return nb % 1 >= 0.5 ? negative ? (round(nb) * -1) - 1 : round(nb) : negative ? round(nb) * -1 : round(nb) - 1
+    return nb % 1 >= 0.5 ? negative ? (round(nb) * -1) - 1 : round(nb)-1 : negative ? round(nb) * -1 : round(nb)
 }
 
-console.log(round(5,8));
+function trunc(nb){
+    if (nb % 1 === 0) {
+        return nb
+    }
+
+    return nb <= 0 ? nb * -1 % 1 > 0.5 ? round(nb) + 1 : round(nb) : nb % 1 >= 0.5 ? round(nb) - 1 : round(nb)
+}
