@@ -1,4 +1,4 @@
-function blockchain(data,prev = {index:0, hash:'0'}) {
+function blockChain(data,prev = {index:0, hash:'0'}) {
     let block = {
         index: number,
         hash: string
