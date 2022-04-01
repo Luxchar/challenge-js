@@ -11,5 +11,5 @@ let arrToObj = (arg) => Object.assign({}, arg);
 let strToObj = (arg) => Object.assign({}, strToArr(arg));
 
 const superTypeOf = (obj) => {
-    return Object.prototype.toString.call(obj).slice(8, -1);
+    return Object.prototype.toString.call(obj).slice(8, -1) === 'Null';
 }
