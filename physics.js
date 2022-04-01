@@ -4,7 +4,7 @@ function getAcceleration(object) {
     } else if (!Number.isNaN(object.Δv/object.Δt)) {
         return object.Δv/object.Δt;
     } else if (!Number.isNaN((object.d*2)/(object.t**2))) {
-        return object.force/object.mass;
+        return (object.d*2)/(object.t**2);
     }
     return 'impossible';
 }
