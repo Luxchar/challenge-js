@@ -4,9 +4,6 @@ function pyramid(str, nb) {
         for (let j = 1; j <= nb - i; j++) { // printing spaces
           res += " ";
         }
-        if (nb >= 15 && i > 1) {
-            res += " ";
-        }
         for (let k = 0; k < 2 * i-1 ; k++) { // printing star
           res += str;
         }
@@ -17,5 +14,3 @@ function pyramid(str, nb) {
       }
     return res
 }
-
-console.log(pyramid('*',5))
