@@ -2,6 +2,7 @@ function chunk(arr, nb) {
     let temp = []
     let res = []
     for (let i = 0; i < arr.length; i++) {
+        temp.push(arr[i])
         if (temp.length == nb) {
             res.push(temp)
             temp = []
