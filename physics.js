@@ -8,4 +8,5 @@ function getAcceleration(object) {
     if (!Number.isNaN((object.d*2)/object.t**2)) {
         return object.force/object.mass;
     }
+    return 'impossible';
 }
