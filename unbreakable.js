@@ -12,7 +12,7 @@ function split(str, delimiter) {
 }
 
 function join(arr,delimiter = ",") {
-    res = "";
+    let res = "";
     for (let i = 0; i < arr.length; i++) {
        res += arr[i] + delimiter
     }
