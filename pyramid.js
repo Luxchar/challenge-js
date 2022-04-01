@@ -4,7 +4,7 @@ function pyramid(str, nb) {
         for (let j = 1; j <= nb - i; j++) { // printing spaces
           res += " ";
         }
-        for (let k = 0; k < 2 * i - 1; k++) { // printing star
+        for (let k = 0; k < 2 * i-1 ; k++) { // printing star
           res += str;
         }
         if (i == nb) {
