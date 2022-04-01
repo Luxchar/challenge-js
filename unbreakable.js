@@ -4,6 +4,7 @@ function split(str, delimiter) {
     for (let i = 0; i < str.length; i++) {
         if (str[i] === delimiter) {
             arr.push(res)
+            res = "";
         } else {
             res += str[i]       
         }
