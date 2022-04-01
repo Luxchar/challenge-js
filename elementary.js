@@ -9,26 +9,29 @@ function multiply(a, b){
 }
 
 function divide(a, b) {
-      var sign = 1;
+  let result = 0
+  let negative = false
+
+  if (a < 0 && b < 0) {
+      a = multiply(a, -1)
+      b = multiply(b, -1)
+  } else if (a < 0) {
+      negative = true
+      a = multiply(a, -1)
+  } else if (b < 0) {
+      negative = true
+      b = multiply(b, -1)
+  }
+
+  while (a > 0) {
+      a -= b
       if (a < 0) {
-        a = -a;
-        sign = -sign;
+          break
       }
-      if (b < 0) {
-        b = -b;
-        sign = -sign;
-      }
-      var result = 0;
-      while (a >= 0) {
-        a -= b;
-        result++;
-      }
-      resultcopy = result;
-      while (sign > 0) {
-        result += resultcopy;
-        sign-=1
-    }
-      return result - 1;
+      result++
+  }
+
+  return negative ? result == 0 ? 0 : multiply(result, -1) : result
 }
 
 function modulo(a,b) {
