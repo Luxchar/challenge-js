@@ -1,5 +1,4 @@
 function round(nb) {
-    console.log('round')
     let negative = false
     if (nb < 0){
         negative = true
