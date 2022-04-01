@@ -34,17 +34,17 @@ function ceil(nb) {
 }
 
 function floor(nb){
+    let negative = false
     if (nb % 1 === 0) {
         return nb
     }
 
-    let negative = false
     if (nb < 0) {
         negative = true
         nb *= -1
     }
 
-    return nb % 1 >= 0.5 ? negative ? (round(nb) * -1) - 1 : round(nb)-1 : negative ? round(nb) * -1 : round(nb)
+    return nb % 1 >= 0.5 ? negative ? (round(nb) * -1) + 1 : round(nb)-1 : negative ? round(nb) * -1 : round(nb)
 }
 
 function trunc(nb){
@@ -54,5 +54,3 @@ function trunc(nb){
 
     return nb <= 0 ? nb * -1 % 1 > 0.5 ? round(nb) + 1 : round(nb) : nb % 1 >= 0.5 ? round(nb) - 1 : round(nb)
 }
-
-console.log(floor(-4))
