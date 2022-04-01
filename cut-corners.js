@@ -36,7 +36,7 @@ function ceil(nb) {
 function floor(nb){
     let negative = false
     if (nb % 1 === 0) {
-        return nb
+        return nb+1
     }
 
     if (nb < 0) {
@@ -52,5 +52,7 @@ function trunc(nb){
         return nb
     }
 
-    return nb <= 0 ? nb * -1 % 1 > 0.5 ? round(nb) + 2 : round(nb) : nb % 1 >= 0.5 ? round(nb) - 1 : round(nb)
+    return nb <= 0 ? nb * -1 % 1 > 0.5 ? round(nb) + 1 : round(nb) : nb % 1 >= 0.5 ? round(nb) - 1 : round(nb)
 }
+
+console.log(floor(-4))
