@@ -20,9 +20,5 @@ function join(arr,delimiter = ",") {
             res += arr[i]+ delimiter
         }
     }
-    res = res.substring(0, res.length - elem.length)
     return res;
 }
-
-console.log(split('ggaergraegraegg - dddddd - bddd', ' - '))
-console.log(join('ggaergraegraegg dddddd bddd', ' '))
