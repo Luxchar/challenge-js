@@ -1,7 +1,7 @@
 let arrToSet = (arg) => new Set(arg);
 let arrToStr = (arg) => arg.join('');
-let setToArr = (arg) => arg.from(Set);
-let setToStr = (arg) => arrToStr(Array.from(arg));
+let setToArr = (arg) => Set.from(arg);
+let setToStr = (arg) => Array.from(arg).join(' ');
 let strToArr = (arg) => arg.split("");
 let strToSet = (arg) => [...arg].join(' ');
 let mapToObj = (arg) => Object.fromEntries(arg);
