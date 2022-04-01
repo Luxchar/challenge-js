@@ -2,9 +2,11 @@ function round(nb) {
     let negative = false
     if (nb < 0){
         negative = true
+        nb *= -1
     }
     let under = false
     if (nb % 1 === 0) {
+        console.log("test")
         return nb
     } else if (nb % 1 > 0.5) {
         under = true
@@ -46,4 +48,4 @@ function floor(nb){
     return nb % 1 >= 0.5 ? negative ? (round(nb) * -1) - 1 : round(nb) : negative ? round(nb) * -1 : round(nb) - 1
 }
 
-console.log(floor(5,8));
+console.log(round(5,8));
