@@ -3,11 +3,11 @@ function slice(input, start = 0, end = input.length-1) {
     let arr = []
     if (start < 0) {
         start = -start
-        start = str.length - start
+        start = input.length - start
     }
     if (end < 0) {
         end = -end
-        end = str.length - end
+        end = input.length - end
     }
     for (let i = start; i <= end; i++) {
             if (typeof input == 'string') {
