@@ -36,7 +36,7 @@ function ceil(nb) {
 function floor(nb){
     let negative = false
     if (nb % 1 === 0) {
-        return nb+1
+        return nb
     }
 
     if (nb < 0) {
