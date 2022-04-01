@@ -2,6 +2,9 @@ function multiply(a, b){
     if (b < 0) { //negative handling
         return -multiply(a, -b)
     }
+    if (a < 0) { //negative handling
+      return -multiply(-a, b)
+    }
     return ("i").repeat(a).repeat(b).length    
 }
 
