@@ -1,5 +1,5 @@
 function nasa(n) {
-    res = "" 
+    let res = "" 
     for (let i = 0; i < n; i++) {
         if (i % 3 === 0) {
             res += 'NA '
