@@ -1,4 +1,5 @@
 function round(nb) {
+    console.log('round')
     let negative = false
     if (nb < 0){
         negative = true
@@ -36,7 +37,7 @@ function ceil(nb) {
 function floor(nb){
     let negative = false
     if (nb % 1 === 0) {
-        return nb+1
+        return nb
     }
 
     if (nb < 0) {
