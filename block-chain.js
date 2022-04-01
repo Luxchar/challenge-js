@@ -1,9 +1,10 @@
 function blockChain(data,prev = {index:0, hash:'0'}) {
     let block = {
-        index,
-        hash
+        data,
+        prev
     }
     block.index = block.prev.index + 1
-    block.hash = hash(block.prev.hash + JSON.stringify(data))
+    block.hash = hashCode(block.prev.hash + JSON.stringify(data))
+    block.chain = (data) => blockChain(data,block)
     return block;
 }

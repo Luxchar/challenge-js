@@ -1,5 +1,5 @@
 function split(str, delimiter) {
-    arr = [];
+    let arr = [];
     res = "";
     for (let i = 0; i < str.length; i++) {
         if (str[i] === delimiter) {
@@ -13,7 +13,7 @@ function split(str, delimiter) {
 
 function join(arr,delimiter = ",") {
     res = "";
-    for (let i = 0; i < str.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
        res += arr[i] + delimiter
     }
     return str;
