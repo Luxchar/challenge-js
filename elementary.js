@@ -23,7 +23,7 @@ function divide(a, b) {
         a -= b;
         result++;
       }
-      resultcopy = result
+      resultcopy = result;
       while (sign > 0) {
         result += resultcopy;
         sign-=1
