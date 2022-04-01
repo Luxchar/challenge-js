@@ -1,16 +1,14 @@
-function slice(array, start = 0, end = array.length) {
+function slice(input, start = 0, end = array.length-1) {
     let res = ''
     let arr = []
-    for (let i = 0; i <= array.length - 1; i++) {
-        if (i >= start && i < end) {
-            if (typeof arr == 'string') {
-                res += arr[i]
-            } else if (Array.isArray(arr)) {
-                arr.push(arr[i])
+    for (let i = start; i <= end; i++) {
+            if (typeof input == 'string') {
+                res += input[i]
+            } else if (Array.isArray(input)) {
+                arr.push(input[i])
             }
-        }
     }
-    if (typeof arr == 'string') {
+    if (typeof input == 'string') {
         return res
     }
     return arr 
