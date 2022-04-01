@@ -7,8 +7,8 @@ function chunk(arr, nb) {
             temp = []
         }
     }
-    if (arr.length % num !== 0) { //array has still x number < nb left
-        result.push(temp)
+    if (arr.length % nb !== 0) { //array has still x number < nb left
+        res.push(temp)
     }
     return res
 }
