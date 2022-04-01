@@ -3,12 +3,12 @@ let arrToStr = (arg) => arg.join('');
 let setToArr = (arg) => Array.from(arg);
 let setToStr = (arg) => arrToStr(Array.from(arg));
 let strToArr = (arg) => arg.split("");
-let strToSet = (arg) => [...arg].join(' ');
+let strToSet = (arg) => new Set(Array.from(str));
 let mapToObj = (arg) => Object.fromEntries(arg);
-let objToArr = (arg) => Object.entries(arg);
+let objToArr = (arg) => Object.values(arg);
 let objToMap = (arg) => new Map(Object.entries(arg));
-let arrToObj = (arg) => Object.fromEntries(arg);
-let strToObj = (arg) => Object.fromEntries(arg.split(' ').map(x => x.split(':')));
+let arrToObj = (arg) => Object.assign({}, arr);
+let strToObj = (arg) => Object.assign({}, strToArr(arg));
 
 const superTypeOf = (obj) => {
     return Object.prototype.toString.call(obj).slice(8, -1);
