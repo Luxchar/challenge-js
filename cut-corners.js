@@ -6,7 +6,6 @@ function round(nb) {
     }
     let under = false
     if (nb % 1 === 0) {
-        console.log("test")
         return nb
     } else if (nb % 1 > 0.5) {
         under = true
