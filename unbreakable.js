@@ -1,10 +1,13 @@
 function split(str, delimiter) {
     let arr = [];
     let res = "";
-    for (let i = 0; i < str.length+1; i++) {
+    for (let i = 0; i < str.length; i++) {
         if (str[i] === delimiter) {
             arr.push(res)
             res = "";
+        } else if (i === str.length - 1) {
+            res += str[i]  
+            arr.push(res)
         } else {
             res += str[i]       
         }
