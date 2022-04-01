@@ -4,7 +4,7 @@ function blockChain(data,prev = {index:0, hash:'0'}) {
         prev
     }
     block.index = block.prev.index + 1
-    block.hash = hashCode(obj.index + block.prev.hash + JSON.stringify(data))
+    block.hash = hashCode(block.index + block.prev.hash + JSON.stringify(data))
     block.chain = (data) => blockChain(data,block)
     return block;
 }

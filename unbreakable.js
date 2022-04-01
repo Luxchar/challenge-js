@@ -1,6 +1,6 @@
 function split(str, delimiter) {
     let arr = [];
-    res = "";
+    let res = "";
     for (let i = 0; i < str.length; i++) {
         if (str[i] === delimiter) {
             arr.push(res)
