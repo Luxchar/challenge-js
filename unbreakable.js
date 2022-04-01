@@ -20,5 +20,6 @@ function join(arr,delimiter = ",") {
             res += arr[i]+ delimiter
         }
     }
+    res = res.substring(0, res.length - delimiter.length) //character at the end prints 2 times
     return res;
 }
