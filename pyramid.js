@@ -1,13 +1,12 @@
 function pyramid(str, nb) {
-    let res = ""
+    let res = ''
     for (let i = 1; i <= nb; i++) {
-        for (let j = 1; j <= nb - i; j++) { // printing spaces
-          res += " ";
+        res += ' '.repeat(nb - i).repeat(str.length) //space
+        res += str.repeat(i * 2 - 1) //character (str)
+        if (i === nb) { //no \n on last row
+            return res
         }
-        for (let k = 0; k < 2 * i-1 ; k++) { // printing star
-          res += str;
-        }
-        res += "\n";
-      }
+        res += '\n'
+    }
     return res
 }
