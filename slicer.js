@@ -1,7 +1,7 @@
 function slice(array, start = 0, end = array.length) {
     let res = ''
     let arr = []
-    for (let i = 0; i <= arr.length - 1; i++) {
+    for (let i = 0; i <= array.length - 1; i++) {
         if (i >= start && i < end) {
             if (typeof arr == 'string') {
                 res += arr[i]
