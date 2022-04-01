@@ -1,6 +1,6 @@
 function getAcceleration(object) {
-    if (!Number.isNaN(object.force/object.mass)) {
-        return object.force/object.mass;
+    if (!Number.isNaN(object.f/object.m)) {
+        return object.f/object.m;
     }
     if (!Number.isNaN(object.Δv/object.Δt)) {
         return object.Δv/object.Δt;
