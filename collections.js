@@ -9,3 +9,7 @@ let objtoarr = (arg) => Object.entries(arg);
 let objtomap = (arg) => new Map(Object.entries(arg));
 let arrtoobj = (arg) => Object.fromEntries(arg);
 let strtoobj = (arg) => Object.fromEntries(arg.split(' ').map(x => x.split(':')));
+
+const supertypeof = (obj) => {
+    return Object.prototype.toString.call(obj).slice(8, -1);
+}
