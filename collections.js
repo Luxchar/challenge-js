@@ -10,4 +10,4 @@ let objToMap = (arg) => new Map(Object.entries(arg));
 let arrToObj = (arg) => Object.assign({}, arg);
 let strToObj = (arg) => Object.assign({}, strToArr(arg));
 
-const superTypeOf = (arg) => toString.call(arg).slice(8, -1) === 'Null' ? 'null' : toString.call(arg).slice(8, -1);
+const superTypeOf = (arg) => toString.call(arg).slice(8, -1) === 'Null' ? 'null' : toString.call(arg).slice(8, -1) === 'Undefined' ? 'undefined' : toString.call(arg).slice(8, -1);
