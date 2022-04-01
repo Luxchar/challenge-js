@@ -7,7 +7,7 @@ let strToSet = (arg) => new Set(Array.from(arg));
 let mapToObj = (arg) => Object.fromEntries(arg);
 let objToArr = (arg) => Object.values(arg);
 let objToMap = (arg) => new Map(Object.entries(arg));
-let arrToObj = (arg) => Object.assign({}, arr);
+let arrToObj = (arg) => Object.assign({}, arg);
 let strToObj = (arg) => Object.assign({}, strToArr(arg));
 
 const superTypeOf = (obj) => {
