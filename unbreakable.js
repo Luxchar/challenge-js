@@ -1,24 +1,28 @@
-function split(str, delimiter) {
-    let arr = [];
-    let res = "";
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] === delimiter) {
-            arr.push(res)
-            res = "";
-        } else if (i === str.length - 1) {
-            res += str[i]  
-            arr.push(res)
-        } else {
-            res += str[i]       
+function split(str, limiter) {
+    let arr = []
+    for (let i = 0; i < str.length - limiter.length+1; i++) {
+        if (str.substring(i,i+limiter.length) == limiter) {
+            arr.push(str.substring(0, i))
+            str = str.slice(i + limiter.length)
+            i = 0
         }
     }
-    return arr;
+    arr.push(str)
+    return arr
 }
 
 function join(arr,delimiter = ",") {
     let res = "";
     for (let i = 0; i < arr.length; i++) {
-       res += arr[i] + delimiter
+        if (delimiter.length === 0) {
+            res += arr[i] 
+        } else {
+            res += arr[i]+ delimiter
+        }
     }
-    return str;
+    res = res.substring(0, res.length - elem.length)
+    return res;
 }
+
+console.log(split('ggaergraegraegg - dddddd - bddd', ' - '))
+console.log(join('ggaergraegraegg dddddd bddd', ' '))
