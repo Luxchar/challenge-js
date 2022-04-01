@@ -1,4 +1,4 @@
-function slice(input, start = 0, end = input.length-1) {
+function slice(input, start = 0, end = input.length) {
     let res = ''
     let arr = []
     if (start < 0) {
