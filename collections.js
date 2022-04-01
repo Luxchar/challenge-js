@@ -1,15 +1,15 @@
-let arrtoset = (arg) => new Set(arg);
-let arrtostr = (arg) => arg.join('');
-let settoarr = (arg) => arg.from(Set);
-let settostr = (arg) => Array.from(arg).join(' ');
-let strtoarr = (arg) => arg.split("");
-let strtoset = (arg) => [...arg].join(' ');
-let maptoobj = (arg) => Object.fromEntries(arg);
-let objtoarr = (arg) => Object.entries(arg);
-let objtomap = (arg) => new Map(Object.entries(arg));
-let arrtoobj = (arg) => Object.fromEntries(arg);
-let strtoobj = (arg) => Object.fromEntries(arg.split(' ').map(x => x.split(':')));
+let arrToSet = (arg) => new Set(arg);
+let arrToStr = (arg) => arg.join('');
+let setToArr = (arg) => arg.from(Set);
+let setToStr = (arg) => Array.from(arg).join(' ');
+let strToArr = (arg) => arg.split("");
+let strToSet = (arg) => [...arg].join(' ');
+let mapToObj = (arg) => Object.fromEntries(arg);
+let objToArr = (arg) => Object.entries(arg);
+let objToMap = (arg) => new Map(Object.entries(arg));
+let arrToObj = (arg) => Object.fromEntries(arg);
+let strToObj = (arg) => Object.fromEntries(arg.split(' ').map(x => x.split(':')));
 
-const supertypeof = (obj) => {
+const superTypeOf = (obj) => {
     return Object.prototype.toString.call(obj).slice(8, -1);
 }
