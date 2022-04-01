@@ -3,7 +3,7 @@ let arrToStr = (arg) => arg.join('');
 let setToArr = (arg) => Array.from(arg);
 let setToStr = (arg) => arrToStr(Array.from(arg));
 let strToArr = (arg) => arg.split("");
-let strToSet = (arg) => new Set(Array.from(str));
+let strToSet = (arg) => new Set(Array.from(arg));
 let mapToObj = (arg) => Object.fromEntries(arg);
 let objToArr = (arg) => Object.values(arg);
 let objToMap = (arg) => new Map(Object.entries(arg));
