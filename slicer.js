@@ -1,4 +1,4 @@
-function slicer(array, start = 0, end = array.length) {
+function slice(array, start = 0, end = array.length) {
     let res = ''
     let arr = []
     for (let i = 0; i <= arr.length - 1; i++) {
