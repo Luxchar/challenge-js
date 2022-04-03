@@ -1,6 +1,6 @@
 let res = [];
 let result = [];
-function subsetSum(target, numbers = [], partial) {
+function sums(target, numbers = [], partial) {
     for(i = 1; i < target; i++) {
         numbers.push(i)
     }
