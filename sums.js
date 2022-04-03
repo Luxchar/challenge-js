@@ -20,8 +20,8 @@ function sums(target, numbers = [], partial) {
     if (s === target) {
         for (var i = 0; i < res.length; i++) {
 
-            str = partial.join('+');
-            str2 = res[i].toString();
+            let str = partial.join('+');
+            let str2 = res[i].toString();
             if (areAnagram(str2, str)) {
                 return;
             }
@@ -30,7 +30,7 @@ function sums(target, numbers = [], partial) {
         result.push(partial);
         return;
     }
-  
+
     if (s >= target) {
       return;  // if we reach the number why bother to continue
     }
