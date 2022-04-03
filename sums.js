@@ -1,6 +1,9 @@
 let res = [];
 let result = [];
 function sums(target, numbers = [], partial) {
+    if (target === 0) {
+        return []
+    }
     for(i = 1; i < target; i++) {
         numbers.push(i)
     }
