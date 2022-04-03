@@ -2,10 +2,10 @@ let res = [];
 let result = [];
 function sums(target, numbers = [], partial) {
     if (target === 0) {
-        return []
+        return [];
     }
     for(i = 1; i < target; i++) {
-        numbers.push(i)
+        numbers.push(i);
     }
     var s, n, remaining;
   
@@ -20,13 +20,13 @@ function sums(target, numbers = [], partial) {
     if (s === target) {
         for (var i = 0; i < res.length; i++) {
 
-            str = partial.join('+')
-            str2 = res[i].toString()
+            str = partial.join('+');
+            str2 = res[i].toString();
             if (areAnagram(str2, str)) {
                 return;
             }
         }
-        res.push(partial.join('+'))
+        res.push(partial.join('+'));
         result.push(partial);
         return;
     }
@@ -40,6 +40,6 @@ function sums(target, numbers = [], partial) {
       remaining = numbers.slice(i + 1);
       sums(target, remaining, partial.concat([n]));
     }
-    return result
+    return result;
   }
   const areAnagram = (str1, str2) => str1.toLowerCase().split('').sort().join('') === str2.toLowerCase().split('').sort().join('');
