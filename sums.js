@@ -1,14 +1,42 @@
-function sums(target, numbers, partial=[], partial_sum=0){
-    if (partial_sum == target) {
-        yield partial;
+let res = [];
+let result = [];
+function subsetSum(target, numbers = [], partial) {
+    for(i = 1; i < target; i++) {
+        numbers.push(i)
     }
-    if (partial_sum >= target) {
+    var s, n, remaining;
+  
+    partial = partial || [];
+  
+    // sum partial
+    s = partial.reduce(function (a, b) {
+      return a + b;
+    }, 0);
+  
+    // check if the partial sum is equals to target
+    if (s === target) {
+        for (var i = 0; i < res.length; i++) {
+
+            str = partial.join('+')
+            str2 = res[i].toString()
+            if (areAnagram(str2, str)) {
+                return;
+            }
+        }
+        res.push(partial.join('+'))
+        result.push(partial);
         return;
     }
-    for (let i = 0; i < numbers.length; i++) {
-        let remaining = numbers.slice(i + 1);
-        yield sums(target, remaining, partial.concat(numbers[i]), partial_sum + numbers[i]);
+  
+    if (s >= target) {
+      return;  // if we reach the number why bother to continue
     }
-}
-
-console.log(sums(4))
+  
+    for (var i = 0; i < numbers.length; i++) {
+      n = numbers[i];
+      remaining = numbers.slice(i + 1);
+      subsetSum(target, remaining, partial.concat([n]));
+    }
+    return result
+  }
+  const areAnagram = (str1, str2) => str1.toLowerCase().split('').sort().join('') === str2.toLowerCase().split('').sort().join('');
