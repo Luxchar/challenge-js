@@ -38,7 +38,7 @@ function sums(target, numbers = [], partial) {
     for (var i = 0; i < numbers.length; i++) {
       n = numbers[i];
       remaining = numbers.slice(i + 1);
-      subsetSum(target, remaining, partial.concat([n]));
+      sums(target, remaining, partial.concat([n]));
     }
     return result
   }
