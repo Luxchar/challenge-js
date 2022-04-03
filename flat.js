@@ -1,9 +1,9 @@
-function flat(items) {
+function flat(items, depth = 1) {
     const arr = [];
   
     items.forEach(item => {
       if (Array.isArray(item)) {
-        arr.push(...flat(item));
+        arr.push(...flat(item, depth--));
       } else {
         arr.push(item);
       }
@@ -11,4 +11,3 @@ function flat(items) {
   
     return arr;
   }
-  
