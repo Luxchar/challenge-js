@@ -1,10 +1,9 @@
-function findExpression(nb, res = 1, seq = "") {
-    console.log(seq, '   ', res)
+function findExpression(nb, res = 1) {
     if (res === nb) {
-        return '1 ' + seq
+        return res
     }
     if (res < nb) {
-        return findExpression(nb, res*=parseInt(mul2[1]), seq+=mul2+' ') || findExpression(nb, res+=parseInt(add4[1]), seq+=add4+' ') || undefined ;
+        return findExpression(nb, res*=parseInt(mul2[1])) || findExpression(nb, res+=parseInt(add4[1])) || undefined ;
     }
 }
 
