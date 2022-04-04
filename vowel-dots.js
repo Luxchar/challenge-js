@@ -12,6 +12,6 @@ function vowelDots(str) {
 
 function isVowelRegEx(char) {
     if (char.length == 1) {
-      return /[aeiou]/.test(char);
+      return /[aeiouAEIOU]/.test(char);
     }
   }
