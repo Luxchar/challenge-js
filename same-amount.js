@@ -5,7 +5,7 @@ function sameAmount(data,reg1,reg2) {
     const resr1 = data.match(r1)
     const resr2 = data.match(r2)
     console.log(resr1,'---',resr2)
-    if(resr1.length === resr2.length){
+    if((resr1 != null&&resr2!=null)&&(resr1.length === resr2.length)){
         return true
     }
     return false
