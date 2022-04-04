@@ -1,3 +1,4 @@
+const vowels = /[aeiouAEIOU]/g;
 function vowelDots(str) {
     for (let i = 0; i < str.length; i++) {
         if (isVowelRegEx(str[i])) {
