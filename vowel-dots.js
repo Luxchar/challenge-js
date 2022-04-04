@@ -1,14 +1,13 @@
 const vowels = /[aeiouAEIOU]/g;
 function vowelDots(str) {
+    let res = '';
     for (let i = 0; i < str.length; i++) {
         if (isVowelRegEx(str[i])) {
-            if (str[i+1] === ".") {
-                str = str.substring(0, i) + str.substring(i+1)
-                i = i-1
-            }
+            res+='.';
         }
+        res+=str[i];
     }
-    return str;
+    return res;
 }
 
 function isVowelRegEx(char) {
