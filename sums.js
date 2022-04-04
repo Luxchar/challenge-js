@@ -1,6 +1,4 @@
-let res = [];
-let result = [];
-function sums(target, numbers = [], partial) {
+function sums(target, numbers = [], partial,res = [],result = []) {
     if (target === 0) {
         return [];
     }
@@ -22,7 +20,7 @@ function sums(target, numbers = [], partial) {
 
             let str = partial.join('+');
             let str2 = res[i].toString();
-            if (areAnagram(str2, str)) {
+            if (areAnagram(str2, str)) { //remove doublons
                 return;
             }
         }
@@ -38,7 +36,7 @@ function sums(target, numbers = [], partial) {
     for (var i = 0; i < numbers.length; i++) {
       n = numbers[i];
       remaining = numbers.slice(i + 1);
-      sums(target, remaining, partial.concat([n]));
+      sums(target, remaining, partial.concat([n]),res,result);
     }
     return result;
   }
