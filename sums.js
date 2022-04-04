@@ -41,3 +41,6 @@ function sums(target, numbers = [], partial,res = [],result = []) {
     return result;
   }
   const areAnagram = (str1, str2) => str1.toLowerCase().split('').sort().join('') === str2.toLowerCase().split('').sort().join('');
+
+  console.log(sums(1));
+  console.log(sums(2));
