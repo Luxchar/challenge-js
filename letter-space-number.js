@@ -6,8 +6,9 @@ function letterSpaceNumber(str) {
                 if (!str[i+3].match(/[a-z]/i) && !str[i+3].match(/[0-9]/)) {
                     res.push(str[i]+' '+str[i+2]);   
                 }
+            } else {
+                res.push(str[i]+' '+str[i+2]);
             }
-            res.push(str[i]+' '+str[i+2]);
         }
     }
     return res;
