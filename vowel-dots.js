@@ -8,6 +8,7 @@ function vowelDots(str) {
             }
         }
     }
+    return str;
 }
 
 function isVowelRegEx(char) {
