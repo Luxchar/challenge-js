@@ -10,7 +10,9 @@ function getURL(str) {
         const element = resreg[i];
         const regex2 = new RegExp(element,'g')
         const resreg2 = str.match(regex2)
-        res.push(element)
+        if(/(http(s?)):\/\//i.test(string)) {
+            res.push(element)
+        }
     }
     return res
 }
