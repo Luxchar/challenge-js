@@ -2,7 +2,7 @@ function firstDayWeek(week,year) {
     let time = new Date(year) //time is the first day of the year (default value)
     if(week === 1){
         time.setHours(24)
-        return formattedDate(time) 
+        return formatdate(time) 
     }
         let hours = week*7*24 //how many hours have passed
         time.setHours(hours)
