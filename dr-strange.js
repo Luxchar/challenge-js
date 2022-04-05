@@ -2,7 +2,7 @@ function addWeek(date) {
     let day01 = new Date('0001-01-01')
     let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     let diff = (((date-day01) / (60 * 60 * 24 * 1000))/7) %2 //diff is the number of weeks
-    if(diff%2===0){
+    if(diff%2===0 || diff === 0){
         return days[date.getDay()];
     }
     else {
