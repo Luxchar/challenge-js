@@ -1,7 +1,7 @@
 function getURL(str) {
     let res = []
-    const regex = new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/ ,"g");
-
+    //regex that takes only http and https
+    const regex = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/
     const resreg = str.match(regex)
     if(resreg === null){
         return res
