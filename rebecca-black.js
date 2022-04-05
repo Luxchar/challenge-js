@@ -7,7 +7,7 @@ function isWeekend(date) {
 }
 
 function isLeapYear(year) {
-    return year % 4 === 0 && year % 100 != 0 || year % 400 == 0;
+    return year.getFullYear() % 4 === 0 && year.getFullYear() % 100 !== 0 || year.getFullYear() % 400 === 0;
 }
 
 function isLastDayOfMonth(date) {
