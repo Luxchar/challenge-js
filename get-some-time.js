@@ -5,10 +5,10 @@ function firstDayWeek(week,year) {
         return formatdate(time) 
     }
         let hours = week*7*24 //how many hours have passed
-        time.setHours(hours)
+        time.setHours(hours-126) //dont know why but there's a spare week 
         let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        for(let i = 0; i < 7 ; i++){ // get first day of week
-            let today = days[date.getDay()-1];
+        for(let i = 0; i < 7 ; i++){ // get monday
+            let today = days[time.getDay()-1];
             if(today === 'Monday'){
                 let res = formatdate(time)
                 return res
