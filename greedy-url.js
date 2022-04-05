@@ -1,11 +1,8 @@
 function getURL(str) {
     let res = []
-    const regex = new RegExp(
-        "/(?:(?:https?|http|):\/\/|www\.|ftp\.)(?:\([-a-zA-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-a-zA-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-a-zA-Z0-9+&@#\/%=~_|$?!:,.]*\)|[a-zA-Z0-9+&@#\/%=~_|$])/"
-       ,"g"
-     );
+    const regex = new RegExp(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig ,"g");
 
-     const resreg = str.match(regex)
+    const resreg = str.match(regex)
     if(resreg === null){
         return res
     }
