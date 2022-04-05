@@ -1,27 +1,10 @@
-function getURL(str) {
-    let res = []
-    //regex that takes only http and https
-    const regex = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/
-    const resreg = str.match(regex)
-    if(resreg === null){
-        return res
+//getURL that returns an array with all valid URLs present in a data-set, http and https
+function getURL() {
+    var url = [];
+    var urlRegex = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/gi;
+    var urlArray = data.match(urlRegex);
+    for (var i = 0; i < urlArray.length; i++) {
+        url.push(urlArray[i]);
     }
-    for (let i = 0; i < resreg.length; i++) {
-        const element = resreg[i];
-        const regex2 = new RegExp(element,'g')
-        const resreg2 = str.match(regex2)
-        res.push(element)
-    }
-    return res
+    return url;
 }
-
-// function greedyQuery(str) {
-//     geturl = new RegExp(
-//         "(^|[ \t\r\n])((|http|https|):(([A-Za-z0-9$_.+!*(),;/?:@&~=-])|%[A-Fa-f0-9]{2}){2,}(#([a-zA-Z0-9][a-zA-Z0-9$_.+!*(),;/?:@&~=%-]*))?([A-Za-z0-9$_+!*();/?:~-]))"
-//        ,"g"
-//      );
-//     string.match(str).length
-//     2
-
-//     string.match(str)
-// }
