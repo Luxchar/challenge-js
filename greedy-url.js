@@ -1,7 +1,7 @@
 function getURL(str) {
     let res = []
     const regex = new RegExp(
-        "(^|[ \t\r\n])((|http|https|):"
+        "/(?:(?:https?|http|):\/\/|www\.|ftp\.)(?:\([-a-zA-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-a-zA-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-a-zA-Z0-9+&@#\/%=~_|$?!:,.]*\)|[a-zA-Z0-9+&@#\/%=~_|$])/"
        ,"g"
      );
 
