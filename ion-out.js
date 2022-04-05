@@ -10,7 +10,7 @@ function ionOut(str) {
         const regex2 = new RegExp(element,'g')
         const resreg2 = str.match(regex2)
         if(resreg2.length === 1){
-            res.push(element)
+            res.push(element+'t')
         }
     }
     return res
