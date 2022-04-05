@@ -49,3 +49,4 @@ function sums(target, numbers = [], partial,res = [],result = []) {
   console.log(sums(1));
   console.log(sums(2));
   console.log(sums(4));
+  console.log(sums(5));
