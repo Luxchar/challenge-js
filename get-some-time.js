@@ -29,5 +29,5 @@ function formatdate(date) {
     if (year.length === 1) year = '000' + year;
     if (year.length === 2) year = '00' + year;
     if (year.length === 3) year = '0' + year; 
-    return [year, month, day].join('-');   //returns the date in the format YYYY-MM-DD
+    return [day, month, year].join('-');   //returns the date in the format YYYY-MM-DD
 }
