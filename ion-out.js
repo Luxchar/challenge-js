@@ -9,8 +9,8 @@ function ionOut(str) {
         const element = resreg[i];
         const regex2 = new RegExp(element,'g')
         const resreg2 = str.match(regex2)
-        if(resreg2.length === 1){
-            res.push(element+'t')
+        if (i%2 === 0) { //even because when its not even there's 't' that's added 
+        res.push(element+'t')
         }
     }
     return res
