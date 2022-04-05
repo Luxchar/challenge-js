@@ -6,7 +6,7 @@ function isValid(date) {
 }
 
 function isAfter(date01,date02) {
-    if(date01.getTime() > date02.getTime())
+    if(date01 > date02)
     {
         return true
     }
@@ -14,7 +14,7 @@ function isAfter(date01,date02) {
 }
 
 function isBefore(date01,date02) {
-    if(date01.getTime() < date02.getTime())
+    if(date01 < date02)
     {
         return true
     }
@@ -22,14 +22,14 @@ function isBefore(date01,date02) {
 }
 
 function isFuture(date) {
-    if(date.getTime() > Date.now())
+    if(date > Date.now())
     {
         return true
     }
     return false
 }
 function isPast(date) {
-    if(date.getTime() < Date.now())
+    if(date < Date.now())
     {
         return true
     }
