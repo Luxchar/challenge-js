@@ -10,8 +10,7 @@ function getURL(str) {
         const element = resreg[i];
         const regex2 = new RegExp(element,'g')
         const resreg2 = str.match(regex2)
-        let withoutspaceelement = element.substring(1);
-        res.push(withoutspaceelement)
+        res.push(element)
     }
     return res
 }
