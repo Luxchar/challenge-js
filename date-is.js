@@ -29,7 +29,7 @@ function isFuture(date) {
     return false
 }
 function isPast(date) {
-    if(date < Date.now())
+    if(date < Date.now() && date !== "")
     {
         return true
     }
