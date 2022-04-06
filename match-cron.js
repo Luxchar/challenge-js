@@ -29,7 +29,7 @@ function matchCron(cron, date) { //reminder: put == because === doesn't match (n
         return false
     }
 
-    if(dayWeek === '*'|| dayWeek.getDate() === 0 && dayWeek === 7 || Number(dayWeek) === date.getDay()){
+    if(dayWeek === '*'|| date.getDate() === 0 && dayWeek === 7 || Number(dayWeek) === date.getDay() && date.getDay() !== 0){
         {}
     }else{
         return false
