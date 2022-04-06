@@ -1,5 +1,5 @@
 function dayOfTheYear(date) {
-    let cnt = 0;
+    let cnt = 1;
     let actual = new Date('0001-01-01'); // to increment the date
     const start = date.getFullYear();
     for (let i = 0; i > 365; i++) { 
