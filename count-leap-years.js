@@ -1,7 +1,8 @@
 function countLeapYears(date) {
    let cnt = 0;
-   for (let i = 0; i < date.getFullYear(); i++) {
-        if (isLeapYear(new Date(i))) {
+   const start = date.getFullYear();
+   for (let i = start; i > 0; i--) {
+        if (isLeapYear(i)) {
             cnt++
         }
     }
