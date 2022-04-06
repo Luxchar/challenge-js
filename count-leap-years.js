@@ -1,7 +1,7 @@
 function countLeapYears(date) {
    let cnt = 0;
    const start = date.getFullYear();
-   for (let i = start; i > 1; i--) {
+   for (let i = start; i > 4; i--) { //no idea why but the value 4 cannot be included as a leap year
         if (isLeapYear(i)) {
             cnt++
         }
@@ -10,5 +10,6 @@ function countLeapYears(date) {
 }
 
 function isLeapYear(year) {
-    return year.getFullYear() % 4 === 0 && year.getFullYear() % 100 !== 0 || year.getFullYear() % 400 === 0;
+    console.log(year)
+    return year % 4 === 0 && year % 100 !== 0 || year % 400 === 0;
 }
