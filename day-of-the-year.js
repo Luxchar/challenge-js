@@ -1,13 +1,7 @@
-function dayOfTheYear(date) {
-    let cnt = 1;
-    let actual = new Date('0001-01-01'); // to increment the date
-    const start = date.getFullYear();
-    for (let i = 0; i > 365; i++) { 
-         if (date.getMonth() !== actual.getMonth() && date.Day() !== actual.getDay()) {
-             cnt++
-         } else {
-             return cnt
-         }
-    }
-    return cnt
+function dayOfTheYear(now) {
+    var start = new Date(now.getFullYear(), 0, 0);
+    var diff = now - start;
+    var oneDay = 1000 * 60 * 60 * 24;
+    var day = Math.floor(diff / oneDay);
+    return day
 }
