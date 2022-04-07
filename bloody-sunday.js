@@ -8,11 +8,11 @@ function bloodySunday(date) {
         
         now.setHours(-24)
         if (count === 6) {
-            count = 1
+            count = 6
         } else {
             count++;  
         }  
-
+        
         if(now.getDay() === end.getDay()){
             return days[6-count]
         }
