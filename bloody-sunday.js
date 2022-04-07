@@ -4,17 +4,21 @@ function bloodySunday(date) {
 
     let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     var count = 0
-    for(let i = 0; i < 31 ; i++){ 
+    for(let i = 0; i < 31 ; i++){
+        
+        now.setHours(-24)
+        if (count === 6) {
+            count = 1
+        } else {
+            count++;  
+        }  
+
         if(now.getDay() === end.getDay()){
             return days[6-count]
         }
-        now.setHours(-24)
-        if (count === 6) {
-            count = 0
-        }
-        count++;    
     }
 }
 
 // console.log(bloodySunday(new Date('0001-01-01')))
 // console.log(bloodySunday(new Date('0001-01-06')))
+// console.log(bloodySunday(new Date('0001-01-14')))
