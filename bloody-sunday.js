@@ -13,3 +13,5 @@ function bloodySunday(date) {
     }
     return today
 }
+
+console.log(bloodySunday(new Date('0001-01-01')))
