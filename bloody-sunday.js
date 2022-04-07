@@ -9,5 +9,5 @@ function bloodySunday(date) {
         }
         now.setHours(-24)    
     }
-    return time 
+    return today
 }
