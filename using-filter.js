@@ -29,7 +29,7 @@ function filter5Vowels(object) {
 
 function filter1DistinctVowel(arr) {
     return arr.filter(function(state) {
-        const regex = /[aeiouAEIOU]/g
+        const regex = /[aeiou]/g
         const resRegex = new RegExp(regex)
         let str = state.match(resRegex)
         let arr = []
