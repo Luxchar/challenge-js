@@ -1,6 +1,8 @@
+// Create a function filterShortStateName that takes an array of strings and that returns the ones with less than 7 characters.
+
 function filterShortStateName(arr) {
     return arr.filter(function(state) {
-        return state.length < 6;
+        return state.length < 7;
     });
 }
 
