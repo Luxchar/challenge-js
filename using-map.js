@@ -51,17 +51,17 @@ function tempForecasts(states){
         const regexSpace = /\s\w/g
         const regexSp = new RegExp(regexSpace)
         let strin = all.temperature
-        let res2 = all.states.match(regexSp)
+        let res2 = all.state.match(regexSp)
         let str = strin.match(resRegex)
         // let res3 = all.state.match(regexSp)
         let res = strin.replace(resRegex,'')
         if(res2!== null){
-            all.state = all.states.replace(regexSp,res2[0].toUpperCase())
+            all.state = all.state.replace(regexSp,res2[0].toUpperCase())
         }
         res = parseInt(res)
         let cel = (res -32)*5/9
         cel = Math.floor(cel)
-        let strRes = cel+'°Celsius in '+all.city+', ' + all.states[0].toUpperCase()+all.states.slice(1)
+        let strRes = cel+'°Celsius in '+all.city+', ' + all.state[0].toUpperCase()+all.state.slice(1)
         return strRes
     })  
     return array
