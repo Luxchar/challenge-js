@@ -12,7 +12,7 @@ function filterStartVowel(arr) {
 
 function filter5Vowels(arr) {
     return arr.filter(function(state) {
-        return state.match(/[aeiouAEIOU]{2}/g);
+        return state.match(/[aeiouAEIOU]{5}/g);
     });
 }
 
