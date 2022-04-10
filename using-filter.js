@@ -27,19 +27,33 @@ function filter5Vowels(object) {
     return arr
 }
 
-function filter1DistinctVowel(arr) {
-    return arr.filter(function(state) {
-        const regex = /[aeiou]/g
+function filter1DistinctVowel(obj) {
+    let array = obj.map(filter=>{
+        const regex = /[aeiouAEIOU]/g
         const resRegex = new RegExp(regex)
-        let str = state.match(resRegex)
+        let str = filter.match(resRegex)
         let arr = []
-        for(let i = 0; i < str.length; i++){
-            if(arr.indexOf(str[i]) === -1){
-                arr.push(str[i])
+        let flag = false
+        Loop:
+        for(let i=0;i<str.length-1;i++){
+            for(let j=i+1;j<str.length;j++){
+                if(str[i].toUpperCase()!==str[j].toUpperCase()){
+                    flag - false
+                    break Loop
+                }
             }
+            flag = true
         }
-        return arr.length === 1
-    });
+        if(flag){
+            return filter
+        }
+        return null
+    })
+    let arr = []
+    arr = array.filter(function(s){
+        return s!==null
+    })
+    return arr
 }
 
 function multiFilter(objects) {
