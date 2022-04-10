@@ -27,10 +27,18 @@ function filter5Vowels(object) {
     return arr
 }
 
-
 function filter1DistinctVowel(arr) {
     return arr.filter(function(state) {
-        return state.match(/[aeiou]{1}/i);
+        const regex = /[aeiou]/g
+        const resRegex = new RegExp(regex)
+        let str = state.match(resRegex)
+        let arr = []
+        for(let i = 0; i < str.length; i++){
+            if(arr.indexOf(str[i]) === -1){
+                arr.push(str[i])
+            }
+        }
+        return arr.length === 1
     });
 }
 
