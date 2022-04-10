@@ -1,5 +1,3 @@
-// Create a function filterShortStateName that takes an array of strings and that returns the ones with less than 7 characters.
-
 function filterShortStateName(arr) {
     return arr.filter(function(state) {
         return state.length < 7;
@@ -14,7 +12,7 @@ function filterStartVowel(arr) {
 
 function filter5Vowels(arr) {
     return arr.filter(function(state) {
-        return state.match(/[aeiou]{5}/i);
+        return state.match(/[aeiouAEIOU]{2}/g);
     });
 }
 
