@@ -6,15 +6,27 @@ function filterShortStateName(arr) {
 
 function filterStartVowel(arr) {
     return arr.filter(function(state) {
-        return state[0].match(/[aeiou]/i);
+        return state[0].match(/[aeiouAEIOU]/i);
     });
 }
 
-function filter5Vowels(arr) {
-    return arr.filter(function(state) {
-        return state.match(/[aeiouAEIOU]{5}/g);
-    });
+function filter5Vowels(object) {
+    let array = object.map(vowels=>{
+        const regex = /[aeiouAEIOU]/g
+        const resRegex = new RegExp(regex)
+        let str = vowels.match(resRegex)
+        if(str.length >= 5){
+            return vowels
+        }
+        return null
+    })
+    let arr = []
+    arr = array.filter(function(s){
+        return s!==null
+    })
+    return arr
 }
+
 
 function filter1DistinctVowel(arr) {
     return arr.filter(function(state) {
