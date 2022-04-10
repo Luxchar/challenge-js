@@ -8,7 +8,7 @@ function citiesOnly(objects) {
 function fahrenheitToCelsius(objects) {
     let array = objects.map(function Celsius(val){
         val = parseInt(val)
-        let temperature = (val -32)*1.8
+        let temperature = (val -32)*5/9
         temperature = Math.floor(temperature)
         return temperature+'°C'
         })
