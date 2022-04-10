@@ -1,6 +1,6 @@
 function filterShortStateName(arr) {
     return arr.filter(function(state) {
-        return state.length === 7;
+        return state.length < 6;
     });
 }
 
