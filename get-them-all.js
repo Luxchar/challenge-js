@@ -25,25 +25,25 @@
 //     > export const getArchitects = () => {...}
 
 export const getArchitects = () => {
-    const architects = document.querySelectorAll('.architect');
-    const nonArchitects = document.querySelectorAll('.non-architect');
+    const architects = document.querySelectorAll('a');
+    const nonArchitects = document.querySelectorAll('span');
     return [architects, nonArchitects];
 }
 
 export const getClassical = () => {
-    const classical = document.querySelectorAll('.classical');
-    const nonClassical = document.querySelectorAll('.non-classical');
+    const classical = document.querySelectorAll('classical');
+    const nonClassical = document.querySelectorAll('a:not(classical)');
     return [classical, nonClassical];
 }
 
 export const getActive = () => {
-    const active = document.querySelectorAll('.active');
-    const nonActive = document.querySelectorAll('.non-active');
+    const active = document.querySelectorAll('classical active');
+    const nonActive = document.querySelectorAll('a:not(classical active)');
     return [active, nonActive];
 }
 
 export const getBonannoPisano = () => {
-    const bonannoPisano = document.querySelector('#BonannoPisano');
-    const activeClassical = document.querySelectorAll('.active.classical');
+    const bonannoPisano = document.querySelector('BonannoPisano');
+    const activeClassical = document.querySelectorAll('a:not(#BonannoPisano)');
     return [bonannoPisano, activeClassical];
 }
