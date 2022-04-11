@@ -16,9 +16,9 @@ function sumOrMul(arr,x=0) {
     return res
 }
 
-function funcExec(arr) {
+function funcExec(arr,x=0) {
     let res = arr.reduce(function(s,nb) {
         return nb(s)
-    });
+    },x);
     return res
 }
