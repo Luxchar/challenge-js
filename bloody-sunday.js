@@ -17,3 +17,9 @@ function bloodySunday(date) {
         now.setHours(-24)
     }
 }
+
+console.log(bloodySunday(new Date('0001-01-01')))
+console.log(bloodySunday(new Date('0001-01-03')))
+console.log(bloodySunday(new Date('0001-01-06')))
+console.log(bloodySunday(new Date('0001-01-07')))
+console.log(bloodySunday(new Date('0001-12-01')))
