@@ -22,7 +22,8 @@ function reject(arr, func) {
 
 //Create a partition function that takes an array as first argument, a function as second, and that works like the partition function from lodash.
 function partition(arr, func) {
-    var newArr01,newArr02  = []
+    var newArr01 = []
+    var newArr02  = []
     for (var i = 0; i < arr.length; i++) {
         if (func(arr[i],i,arr)) {
             newArr01.push(arr[i]);
