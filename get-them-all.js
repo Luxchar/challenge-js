@@ -25,25 +25,25 @@
 //     > export const getArchitects = () => {...}
 
 export const getArchitects = () => {
-    const architects = document.getElementsByTagName('a');
-    const nonArchitects = document.getElementsByTagName('span');
+    const architects = Array.from(document.getElementsByTagName('a'));
+    const nonArchitects = Array.from(document.getElementsByTagName('span'));
     return [architects, nonArchitects];
 }
 
 export const getClassical = () => {
-    const classical = document.getElementsByClassName('classical');
-    const nonClassical = document.querySelectorAll('a:not(.classical)');
+    const classical = Array.from(document.getElementsByClassName('classical'));
+    const nonClassical = Array.from(document.querySelectorAll('a:not(.classical)'));
     return [classical, nonClassical];
 }
 
 export const getActive = () => {
-    const active = document.getElementsByClassName('classical active');
-    const nonActive = document.querySelectorAll('a.classical:not(.active)');
+    const active = Array.from(document.getElementsByClassName('classical active'));
+    const nonActive = Array.from(document.querySelectorAll('a.classical:not(.active)'));
     return [active, nonActive];
 }
 
 export const getBonannoPisano = () => {
     const bonannoPisano = document.getElementById('BonannoPisano');
-    const activeClassical = document.querySelectorAll('a:not(#BonannoPisano)');
+    const activeClassical = Array.from(document.querySelectorAll('a:not(#BonannoPisano)'));
     return [bonannoPisano, activeClassical];
 }
