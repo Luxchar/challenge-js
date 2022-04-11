@@ -32,7 +32,7 @@ export const getArchitects = () => {
 
 export const getClassical = () => {
     const classical = document.querySelectorAll('classical');
-    const nonClassical = document.querySelectorAll('a:not(classical)');
+    const nonClassical = document.querySelectorAll('a:not(.classical)');
     return [classical, nonClassical];
 }
 
