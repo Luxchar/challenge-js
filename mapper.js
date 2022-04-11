@@ -10,7 +10,7 @@ function map(arr, func) {
 function flatMap(arr, func) {
     var newArr = [];
     for (var i = 0; i < arr.length; i++) {
-        newArr = newArr.concat(func(arr[i]));
+        newArr = newArr.concat(func(arr[i],i,arr));
     }
     return newArr;
 }
