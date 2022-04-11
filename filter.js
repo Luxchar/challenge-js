@@ -31,5 +31,5 @@ function partition(arr, func) {
             newArr02.push(arr[i]);
         }
     }
-    return newArr01,newArr02;
+    return [newArr01,newArr02];
 }
