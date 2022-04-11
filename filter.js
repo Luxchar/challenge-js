@@ -26,7 +26,8 @@ function partition(arr, func) {
     for (var i = 0; i < arr.length; i++) {
         if (func(arr[i],i,arr)) {
             newArr01.push(arr[i]);
-        } else {
+        } 
+        if (!func(arr[i],i,arr)) {
             newArr02.push(arr[i]);
         }
     }
