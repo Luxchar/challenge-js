@@ -24,6 +24,7 @@ export function build(nb) {
         bricks.push(brick);
         i += 1;
     }
+    return bricks
 }
 
 export function repair() {
