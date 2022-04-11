@@ -2,7 +2,7 @@
 function map(arr, func) {
     var newArr = [];
     for (var i = 0; i < arr.length; i++) {
-        newArr.push(func(arr[i]),i,arr);
+        newArr.push(i, func(arr[i]));
     }
     return newArr;
 }
