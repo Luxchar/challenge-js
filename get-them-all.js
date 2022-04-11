@@ -38,7 +38,7 @@ export const getClassical = () => {
 
 export const getActive = () => {
     const active = document.querySelectorAll('classical active');
-    const nonActive = document.querySelectorAll('a:not(classical active)');
+    const nonActive = document.querySelectorAll('a.classical:not(.active)');
     return [active, nonActive];
 }
 
