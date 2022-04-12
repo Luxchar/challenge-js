@@ -23,9 +23,19 @@
 // addSquare(1, 2);
 // // => 9
 //Create the function flow that will works as the _.flow([funcs]) from lodash.
-
+//handle negative number
 function flow(funcs) {
-    return function(n) {
-        return funcs.reduce((acc, func) => func(acc), n);
-    };
+    if (funcs.length === 0) {
+        return function(arg) {
+        return arg;
+        };
+    }
+    if (funcs.length === 1) {
+        return funcs[0];
+    }
+    return funcs.reduce(function(prev, curr) {
+        return function() {
+        return prev(curr.apply(null, arguments));
+        };
+    });
 }
