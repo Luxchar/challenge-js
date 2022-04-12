@@ -1,16 +1,31 @@
+// _.flow([funcs])
+
+// source npm package
+
+// Creates a function that returns the result of invoking the given functions with the this binding of the created function, where each successive invocation is supplied the return value of the previous.
+// Since
+
+// 3.0.0
+// Arguments
+
+//     [funcs] (...(Function|Function[])): The functions to invoke.
+
+// Returns
+
+// (Function): Returns the new composite function.
+// Example
+
+// function square(n) {
+//   return n * n;
+// }
+ 
+// var addSquare = _.flow([_.add, square]);
+// addSquare(1, 2);
+// // => 9
 //Create the function flow that will works as the _.flow([funcs]) from lodash.
 
-// const square = (nbr) => nbr * nbr
-// const add2Numbers = (nbr1, nbr2) => nbr1 + nbr2
-
-// const flowedFunctions = flow([add2Numbers, square])
-// flowedFunctions(2, 3) // -> 25
-
 function flow(funcs) {
-  return function(...args) {
-    let result = funcs.reduce((acc, func) => {
-      return func(acc)
-    }, args)
-    return result
-  }
+    return function(n) {
+        return funcs.reduce((acc, func) => func(acc), n);
+    };
 }
