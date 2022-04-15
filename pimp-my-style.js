@@ -13,7 +13,7 @@ export function pimp(){
     } else {
         button.classList.add(styles[pimper])
         pimper++
-        if (pimper > 15) {
+        if (pimper === 15) {
             button.classList.add('unpimp')
             unpimp = 15
         }
