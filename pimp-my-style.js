@@ -31,7 +31,6 @@ import {styles} from './pimp-my-style.data.js'
 let pimper = 0
 let unpimp = 14
 export function pimp(){
-    pimper++
     if (pimper >= styles.length){
         document.querySelector('.button').classList.add(styles[unpimp])
         unpimp--
