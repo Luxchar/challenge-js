@@ -1,6 +1,6 @@
 export function compose(){
-    document.addEventListener("keydown", (event)=>{
-        let event = event.keyCode //needs keycode for color change
+    document.addEventListener("keydown", (key)=>{
+        let event = key.keyCode //needs keycode for color change
         if(event === 27){ //esc key
             document.querySelectorAll("div").forEach((item) => {
                 item.remove()
