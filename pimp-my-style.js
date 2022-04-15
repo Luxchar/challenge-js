@@ -31,18 +31,19 @@ import {styles} from './pimp-my-style.data.js'
 let pimper = 0
 let unpimp = 14
 export function pimp(){
+    let button = document.querySelector("button")
     if (pimper >= styles.length){
-        document.querySelector('.button').classList.add(styles[unpimp])
+        button.classList.remove(styles[unpimp])
         unpimp--
         if (unpimp === -1) {
-            document.querySelector('.button').classList.remove('pimp')
+            button.classList.remove('unpimp')
             pimper = 0
         }
     } else {
-        document.querySelector('.button').classList.add(styles[pimper])
+        button.classList.add(styles[pimper])
         pimper++
         if (pimper > styles.length) {
-            document.querySelector('.button').classList.toggle('unpimp')
+            button.classList.add('unpimp')
             unpimp = styles.length - 1
         }
     }
