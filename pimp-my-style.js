@@ -43,7 +43,6 @@ export function pimp(){
         button.classList.add(styles[pimper])
         pimper++
         if (pimper > styles.length) {
-            button.classList.add('unpimp')
             unpimp = styles.length - 1
         }
     }
