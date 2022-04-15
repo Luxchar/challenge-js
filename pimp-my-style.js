@@ -36,13 +36,13 @@ export function pimp(){
         button.classList.remove(styles[unpimp])
         unpimp--
         if (unpimp === -1) {
+            button.classList.remove('unpimp')
             pimper = 0
         }
     } else {
         button.classList.add(styles[pimper])
         pimper++
         if (pimper > styles.length) {
-            button.classList.add('unpimp')
             unpimp = styles.length
         }
     }
