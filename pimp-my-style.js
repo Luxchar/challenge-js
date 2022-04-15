@@ -6,7 +6,7 @@ export function pimp(){
     if (pimper === 15){
         button.classList.remove(styles[unpimp])
         unpimp--
-        if (unpimp === -1) {
+        if (unpimp === 0) {
             button.classList.remove('unpimp')
             pimper = 0
         }
