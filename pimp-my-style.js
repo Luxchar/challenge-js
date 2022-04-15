@@ -1,4 +1,4 @@
-import {styles} from './data.js'
+import {styles} from './pimp-my-style.data.js'
 let pimper = 0
 let unpimp = 14
 export function pimp(){
