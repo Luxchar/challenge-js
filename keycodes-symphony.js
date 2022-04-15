@@ -9,7 +9,7 @@ export function compose(){
             let removeletter = document.querySelectorAll("div")
             removeletter[removeletter.length-1].remove()
         }else{
-            let eventletter = event.key
+            let eventletter = key.key
             let block = document.createElement("div")
             block.classList.add("note")
             let color = "#"+99+event+event
