@@ -4,8 +4,8 @@
 
 function pick(obj, data) {
     const res = {}
-    let newObj = Object.keys(obj)
-    newObj.forEach(key => {
+    let keys = Object.keys(obj)
+    keys.forEach(key => {
         if (key == data) {
             res[key] = obj[key]
         }
