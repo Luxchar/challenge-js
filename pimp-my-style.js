@@ -3,7 +3,7 @@ let pimper = 0
 let unpimp = 15
 export function pimp(){
     let button = document.querySelector("button")
-    if (pimper >= 15){
+    if (pimper === 15){
         button.classList.remove(styles[unpimp])
         unpimp--
         if (unpimp === -1) {
