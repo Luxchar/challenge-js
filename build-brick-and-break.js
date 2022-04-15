@@ -16,18 +16,12 @@ export function build(nb) {
     const bricks = [];
     let brick;
     let i = 0;
-    let count = 2;
     let interval = setInterval(function(){
         brick = document.createElement('div');
         brick.id = `brick-${i + 1}`;
         document.body.append(brick);
         bricks.push(brick);
-        i += 1;
-        if(count === 3){
-            block.dataset.foundation = true
-            count = 0
-            }
-            count++
+        i++;
         if (i === nb) {
             clearInterval(interval);
         }
