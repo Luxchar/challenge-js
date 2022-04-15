@@ -41,7 +41,7 @@ export function pimp(){
     } else {
         document.querySelector('.button').classList.add(styles[pimper])
         pimper++
-        if (pimper === styles.length) {
+        if (pimper > styles.length) {
             document.querySelector('.button').classList.toggle('unpimp')
             unpimp = styles.length - 1
         }
