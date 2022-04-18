@@ -32,11 +32,7 @@ function fusion(obj1, obj2) {
             result[key] = obj1[key].concat(obj2[key]);
         } else if (typeof obj1[key] === "object") {
             //In case of type mismatch you must replace it with the value of the second object
-            if (typeof obj2[key] !== typeof obj1[key]) {
-                result[key] = obj2[key];
-            } else {
-                result[key] = fusion(obj1[key], obj2[key]);
-            }
+            result[key] = fusion(obj1[key], obj2[key]);
         } else if (typeof obj1[key] === "string") {
             if (typeof obj2[key] === "string") {
                 result[key] = obj1[key] + " " + obj2[key];
@@ -58,3 +54,5 @@ function fusion(obj1, obj2) {
     }
     return result;
 }
+
+// console.log(fusion({ a: 1 }, { a: { b: 1 } }).a, { b: 1 })
