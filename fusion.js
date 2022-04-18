@@ -28,10 +28,9 @@
 function fusion(obj1, obj2) {
     let result = {};
     for (let key in obj1) {
-        if (typeof obj1[key] === "array") {
-            result = obj1.concat(obj2);
-        }
-        if (typeof obj1[key] === "object") {
+        if (Array.isArray(obj1[key])) {
+            result[key] = obj1[key].concat(obj2[key]);
+        } else if (typeof obj1[key] === "object") {
             result[key] = fusion(obj1[key], obj2[key]);
         } else if (typeof obj1[key] === "string") {
             if (typeof obj2[key] === "string") {
