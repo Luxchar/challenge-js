@@ -29,10 +29,10 @@ function mapValues(cart, callback) {
     return newCart;
 }
 
-function reduceValues(cart, callback, initialValue) {
-    let result = initialValue;
+function reduceValues(cart, callback) {
+    let total = 0;
     for (let key in cart) {
-        result = callback(result, cart[key]);
+        total = callback(total, cart[key]);
     }
-    return result;
+    return total;
 }
