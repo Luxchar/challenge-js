@@ -29,11 +29,7 @@ function fusion(obj1, obj2) {
     let result = {};
     for (let key in obj1) {
         if (Array.isArray(obj1[key])) {
-            if (typeof obj2[key] === "object") {
-                result[key] = obj2[key];
-            } else {
             result[key] = obj1[key].concat(obj2[key]);
-            }
         } else if (typeof obj1[key] === "object") {
             if (typeof obj2[key] !== typeof obj1[key]) {
                 result[key] = obj2[key];
@@ -63,3 +59,5 @@ function fusion(obj1, obj2) {
     }
     return result;
 }
+
+// console.log(fusion({ arr: [1, '2'] }, { arr: [2] }).arr, [1, '2', 2])
