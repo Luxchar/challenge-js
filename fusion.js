@@ -32,7 +32,7 @@ function fusion(obj1, obj2) {
             result[key] = obj1[key].concat(obj2[key]);
         } else if (typeof obj1[key] === "object" && typeof obj2[key] === "object") {
             result[key] = fusion(obj1[key], obj2[key]);
-        } else if (typeof obj1[key] === "string") {
+        } else if (typeof obj1[key] === "string" && typeof obj2[key] === "string") {
             if (typeof obj2[key] === "string") {
                 result[key] = obj1[key] + " " + obj2[key];
             } else {
