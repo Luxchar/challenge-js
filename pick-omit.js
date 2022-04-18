@@ -19,17 +19,15 @@ function omit(obj, data) {
     let keys = Object.keys(obj)
     keys.forEach(key => {
         if (Array.isArray(data)) {
-            if (!isInArray(key, data)) {
+            console.log(data.includes(key))
+            if (data.includes(key) == false) {
                 res[key] = obj[key]
             }
-        }
-        if (key != data) {
-            res[key] = obj[key]
+        } else {
+            if (key != data) {
+                res[key] = obj[key]
+            }
         }
     })
     return res
 }
-
-function isInArray(value, array) {
-    return array.indexOf(value) > -1;
-  }
