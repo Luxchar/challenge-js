@@ -35,6 +35,8 @@ function fusion(obj1, obj2) {
         } else if (typeof obj1[key] === "string") {
             if (typeof obj2[key] === "string") {
                 result[key] = obj1[key] + " " + obj2[key];
+            } else if (typeof obj2[key] !== undefined) {
+                result[key] = obj2[key];
             } else {
                 result[key] = obj1[key] + "";
             }
@@ -57,3 +59,5 @@ function fusion(obj1, obj2) {
     }
     return result;
 }
+
+console.log(fusion({ a: 'str' }, { a: 1 }).a, 1)
