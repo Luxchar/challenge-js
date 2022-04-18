@@ -1,31 +1,20 @@
 function pick(obj, data) {
-    let res = {}
-    let keys = Object.keys(obj)
-    keys.forEach(key => {
-        if (Array.isArray(data)) {
-            if (data.includes(key)) {
-                res[key] = obj[key]
-            }
-        }
+    const newobj = {}
+    let objkeys = Object.keys(obj)
+    objkeys.forEach(key => {
         if (key == data) {
-            res[key] = obj[key]
+            newobj[key] = obj[key]
         }
     })
-    return res
+    return newobj
 }
-
 function omit(obj, data) {
-    let res = {}
-    let keys = Object.keys(obj)
-    keys.forEach(key => {
-        if (Array.isArray(data)) {
-            if (!data.includes(key)) {
-                res[key] = obj[key]
-            }
-        }
+    const newobj = {}
+    let objkeys = Object.keys(obj)
+    objkeys.forEach(key => {
         if (key != data) {
-            res[key] = obj[key]
+            newobj[key] = obj[key]
         }
     })
-    return res
+    return newobj
 }
