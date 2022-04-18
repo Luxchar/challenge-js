@@ -29,7 +29,7 @@ function fusion(obj1, obj2) {
     let result = {};
     for (let key in obj1) {
         if (typeof obj1[key] === "array") {
-            result[key] = obj1[key].concat(obj2[key]);
+            result = obj1.concat(obj2);
         }
         if (typeof obj1[key] === "object") {
             result[key] = fusion(obj1[key], obj2[key]);
