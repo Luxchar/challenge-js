@@ -28,26 +28,17 @@
 function fusion(obj1, obj2) {
     let result = {};
     for (let key in obj1) {
-        if (Array.isArray(obj1[key])) {
-            if (!Array.isArray(obj2[key])) {
-                console.log("test")
-                result[key] = obj2[key];
-            } else {
-                result[key] = obj1[key].concat(obj2[key]);
-            }
-        } else if (typeof obj1[key] === "object") {
-            if (typeof obj2[key] !== typeof obj1[key]) {
-                result[key] = obj2[key];
-            } else { //In case of type mismatch you must replace it with the value of the second object
-                result[key] = fusion(obj1[key], obj2[key]);
-            }
+        if (Array.isArray(obj1[key]) && Array.isArray(obj2[key])) {
+            result[key] = obj1[key].concat(obj2[key]);
+        } else if (typeof obj1[key] === "object" && typeof obj2[key] === "object") {
+            result[key] = fusion(obj1[key], obj2[key]);
         } else if (typeof obj1[key] === "string") {
             if (typeof obj2[key] === "string") {
                 result[key] = obj1[key] + " " + obj2[key];
             } else {
                 result[key] = obj1[key] + "";
             }
-        } else if (typeof obj1[key] === "number") {
+        } else if (typeof obj1[key] === "number" && typeof obj2[key] === "number") {
             if (typeof obj2[key] === "number") {
                 result[key] = obj1[key] + obj2[key];
             } else if (typeof obj2[key] === "object") {
@@ -55,6 +46,8 @@ function fusion(obj1, obj2) {
             } else {
                 result[key] = obj1[key];
             }
+        } else {
+            result[key] = obj2[key];
         }
     }
     for (let key in obj2) {
