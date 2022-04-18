@@ -19,7 +19,7 @@ function omit(obj, data) {
     let keys = Object.keys(obj)
     keys.forEach(key => {
         if (Array.isArray(data)) {
-            if (!data.includes(key)) {
+            if (!isInArray(key, data)) {
                 res[key] = obj[key]
             }
         }
@@ -30,4 +30,6 @@ function omit(obj, data) {
     return res
 }
 
-console.log(omit({grinders: 'grinders' }, ['grinders', 'saws']))
+function isInArray(value, array) {
+    return array.indexOf(value) > -1;
+  }
