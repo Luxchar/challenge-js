@@ -35,7 +35,7 @@ function fusion(obj1, obj2) {
         } else if (typeof obj1[key] === "string") {
             if (typeof obj2[key] === "string") {
                 result[key] = obj1[key] + " " + obj2[key];
-            } else if (typeof obj2[key] !== undefined) {
+            } else if (typeof obj2[key] === "number") {
                 result[key] = obj2[key];
             } else {
                 result[key] = obj1[key] + "";
