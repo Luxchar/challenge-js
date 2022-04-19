@@ -42,7 +42,7 @@ function debounce(func, wait) {
   };
 }
 
-  function debounce(callback, delay = 0, options = { leading: false, trailing: true }) {
+  function opDebounce(callback, delay = 0, options = { leading: false, trailing: true }) {
     let timeoutId
   
     return function(...args) {
