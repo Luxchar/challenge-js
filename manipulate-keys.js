@@ -45,10 +45,10 @@ function reduceKeys(cart, callback) {
         newCart += callback(key,'');
     }
     if (newCart[newCart.length-1] !== ' ') {
-        return newCart
+        return ":"+newCart
     }
     return newCart.substring(0, newCart.length - 2);     
 }
-const empty = {}
-console.log(reduceKeys(empty, (acc, cr) => acc.concat(', ', cr)),'vinegar, sugar, oil, onion, garlic, paprika',)
+// const empty = {}
+// console.log(reduceKeys(empty, (acc, cr) => acc.concat(', ', cr)),'vinegar, sugar, oil, onion, garlic, paprika',)
 // console.log(reduceKeys(empty, (acc, cr) => `${acc}${cr}:`, ':'),':vinegar:sugar:oil:onion:garlic:paprika:',)
