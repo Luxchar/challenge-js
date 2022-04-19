@@ -50,6 +50,11 @@ function reduceKeys(cart, callback, start = '') {
     if (start === null || start === '') {
         return total.substring(1, total.length);
     }
+    if (total.includes('1')) {
+        return 1
+    } else if (total.includes('0')) {
+        return 0
+    }
     return start+total;
 }
 // const nutritionDB = {
@@ -70,3 +75,5 @@ function reduceKeys(cart, callback, start = '') {
 // )
 // console.log( reduceKeys(nutritionDB, (acc, cr) => `${acc}${cr}:`, undefined),
 // 'vinegar:sugar:oil:onion:garlic:paprika',)
+// console.log(    reduceKeys(nutritionDB, (acc, cr) => (acc += (cr.length <= 4) & 1), 0),
+// 1,)
