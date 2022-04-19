@@ -34,7 +34,7 @@ function debounce(func, wait) {
     const context = this;
     const args = arguments;
     const later = function() {
-      timeout = null;
+      timeout = null; 
       func.apply(context, args);
     };
     clearTimeout(timeout);
@@ -42,27 +42,23 @@ function debounce(func, wait) {
   };
 }
 
-function opDebounce(func, wait, options = {}) {
-  let timeout;
-  return function() {
-    const context = this;
-    const args = arguments;
-    const later = function() {
-      timeout = null;
-      if (!options.leading) {
-        func.apply(context, args);
+  function debounce(callback, delay = 0, options = { leading: false, trailing: true }) {
+    let timeoutId
+  
+    return function(...args) {
+      // isCallbackCalled is necessary to avoid triggering the initialCall twice
+      let isCallBackCalled = false
+  
+      if (timeoutId === null && options.leading) {
+        callback.apply(this, args)
+        isCallBackCalled = true
       }
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (options.leading) {
-      func.apply(context, args);
+  
+      if (timeoutId) clearTimeout(timeoutId)
+  
+      timeoutId = setTimeout(() => {
+        if (options.trailing && !isCallBackCalled) callback.apply(this, args)
+        timeoutId = null
+      }, delay)
     }
-  };
-}
-
-//     await Promise.all([
-//   run(opDebounce(add, 40), { delay: 20, count: 5 }),
-//   run(opDebounce(add, 40), { delay: 20, count: 2 }),
-// ]),
-// [0, 0]
+  }
