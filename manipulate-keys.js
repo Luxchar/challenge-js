@@ -48,7 +48,7 @@ function reduceKeys(cart, callback, start = '') {
         return total.substring(2);
     }
     if (start === null) {
-        return total.substring(0, total.length - 1);
+        return total.substring(1, total.length);
     }
     return start+total;
 }
@@ -65,4 +65,6 @@ function reduceKeys(cart, callback, start = '') {
 // const empty = {}
 // console.log(reduceKeys(nutritionDB, (acc, cr) => acc.concat(', ', cr)),'vinegar, sugar, oil, onion, garlic, paprika\n',)
 // console.log(reduceKeys(nutritionDB, (acc, cr) => `${acc}${cr}:`, ':'),':vinegar:sugar:oil:onion:garlic:paprika:\n',)
-// console.log(reduceKeys(nutritionDB, (acc, cr) => `${acc}${cr}:`, null),'tomato:vinegar:oil:onion:garlic:paprika:sugar:orange\n',)
+// console.log(reduceKeys(nutritionDB, (acc, cr) => `${acc}${cr}:`, null),
+// 'tomato:vinegar:oil:onion:garlic:paprika:sugar:orange',
+// )
