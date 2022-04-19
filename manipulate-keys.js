@@ -42,11 +42,7 @@ function mapKeys(cart, callback) {
 function reduceKeys(cart, callback) {
     let total = '';
     for (let key in cart) {
-        console.log(total)
-        total = callback(total, cart[key]);
+        total = callback(total, key);
     }
-    return total;
+    return total.substring(2, total.length);
 }
-const nutrients = { carbohydrates: 12, protein: 20, fat: 5 }
-console.log(reduceKeys(nutrients, (acc, cr) => acc.concat(', ', cr)),
-'vinegar, sugar, oil, onion, garlic, paprika',)
