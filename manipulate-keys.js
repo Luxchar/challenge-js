@@ -44,6 +44,9 @@ function reduceKeys(cart, callback) {
     for (let key in cart) {
         newCart += callback(key,'');
     }
+    if (newCart[newCart.length] !== ' ') {
+        return newCart
+    }
     return newCart.substring(0, newCart.length - 2);     
 }
 // const empty = {}
