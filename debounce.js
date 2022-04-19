@@ -42,20 +42,20 @@ function debounce(func, wait) {
   };
 }
 
-function opDebounce(func, wait, options = {trailing: false, leading: false}) {
+function opDebounce(func, wait, options = {trailing: true, leading: false}) {
   let timeout;
   return function() {
     const context = this;
     const args = arguments;
     const later = function() {
       timeout = null;
-      if (options.trailing) {
+      if (options.leading) {
         func.apply(context, args);
       }
     };
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
-    if (options.leading) {
+    if (options.trailing) {
       func.apply(context, args);
     }
   };
