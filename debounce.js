@@ -42,23 +42,21 @@ function debounce(func, wait) {
   };
 }
 
-  function opDebounce(callback, delay = 0, options = { leading: false, trailing: true }) {
-    let timeoutId
-  
-    return function(...args) {
-      // isCallbackCalled is necessary to avoid triggering the initialCall twice
-      let isCallBackCalled = false
-  
-      if (timeoutId === null && options.leading) {
-        callback.apply(this, args)
-        isCallBackCalled = true
+function opDebounce(func, wait, options = {leading:false, trailing:true}) {
+  let timeout;
+  return function() {
+    const context = this;
+    const args = arguments;
+    const later = function() {
+      timeout = null;
+      if (!options.leading) {
+        func.apply(context, args);
       }
-  
-      if (timeoutId) clearTimeout(timeoutId)
-  
-      timeoutId = setTimeout(() => {
-        if (options.trailing && !isCallBackCalled) callback.apply(this, args)
-        timeoutId = null
-      }, delay)
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (options.leading) {
+      func.apply(context, args);
     }
-  }
+  };
+}
