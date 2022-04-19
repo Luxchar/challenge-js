@@ -49,13 +49,13 @@ function opDebounce(func, wait, options = {trailing: false, leading: false}) {
     const args = arguments;
     const later = function() {
       timeout = null;
-      if (options.leading) {
+      if (options.trailing) {
         func.apply(context, args);
       }
     };
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
-    if (options.trailing) {
+    if (options.leading) {
       func.apply(context, args);
     }
   };
