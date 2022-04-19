@@ -42,7 +42,8 @@ function mapKeys(cart, callback) {
 function reduceKeys(cart, callback) {
     let newCart = '';
     for (let key in cart) {
-        newCart += callback(key);
+        console.log(key)
+        newCart += callback('',key);
     }
     return newCart;
 }
