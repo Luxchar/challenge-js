@@ -45,5 +45,5 @@ function reduceKeys(cart, callback) {
         console.log(newCart)
         newCart += callback(key,'');
     }
-    return newCart.substring(0, newCart.length - 2););     
+    return newCart.substring(0, newCart.length - 2);     
 }
