@@ -39,10 +39,14 @@ function mapKeys(cart, callback) {
     return newCart;
 }
 
-function reduceKeys(cart, callback, add = 0) {
-    let total = 0;
+function reduceKeys(cart, callback) {
+    let total = '';
     for (let key in cart) {
-        total = callback(total, key);
+        console.log(total)
+        total = callback(total, cart[key]);
     }
-    return total+add;
+    return total;
 }
+const nutrients = { carbohydrates: 12, protein: 20, fat: 5 }
+console.log(reduceKeys(nutrients, (acc, cr) => acc.concat(', ', cr)),
+'vinegar, sugar, oil, onion, garlic, paprika',)
