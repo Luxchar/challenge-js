@@ -16,7 +16,7 @@ function debounce(func, wait) {
   };
 }
 
-function opDebounce(func, wait, options) {
+function opDebounce(func, wait, options = {}) {
   let timeout;
   return function() {
     const context = this;
