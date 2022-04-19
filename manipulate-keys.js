@@ -47,7 +47,7 @@ function reduceKeys(cart, callback, start = '') {
     if (total[0] === ',') {
         return total.substring(2);
     }
-    if (start === null) {
+    if (start === null || start === undefined) {
         return total.substring(1, total.length);
     }
     return start+total;
@@ -68,3 +68,5 @@ function reduceKeys(cart, callback, start = '') {
 // console.log(reduceKeys(nutritionDB, (acc, cr) => `${acc}${cr}:`, null),
 // 'tomato:vinegar:oil:onion:garlic:paprika:sugar:orange',
 // )
+// console.log( reduceKeys(nutritionDB, (acc, cr) => `${acc}${cr}:`, undefined),
+// 'vinegar:sugar:oil:onion:garlic:paprika',)
