@@ -43,29 +43,20 @@ function debounce(func, wait) {
 }
 
 function opDebounce(func, wait, options = {}) {
-    let timeout;
-    let result;
-    let previous = 0;
-    if (!options.leading) {
-        previous = Date.now();
-    }
-    return function() {
-        const context = this;
-        const args = arguments;
-        const later = function() {
-        previous = options.leading === false ? 0 : Date.now();
-        timeout = null;
-        result = func.apply(context, args);
-        };
-        const remaining = wait - (Date.now() - previous);
-        clearTimeout(timeout);
-        if (remaining <= 0 || remaining > wait) {
-        if (options.trailing) {
-            later();
-        }
-        } else {
-        timeout = setTimeout(later, remaining);
-        }
-        return result;
+  let timeout;
+  return function() {
+    const context = this;
+    const args = arguments;
+    const later = function() {
+      timeout = null;
+      if (!options.leading) {
+        func.apply(context, args);
+      }
     };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (options.leading) {
+      func.apply(context, args);
+    }
+  };
 }
