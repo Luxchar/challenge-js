@@ -42,7 +42,7 @@ function debounce(func, wait) {
   };
 }
 
-function opDebounce(func, wait, options = {}) {
+function opDebounce(func, wait, options = {trailing: false, leading: false}) {
   let timeout;
   return function() {
     const context = this;
@@ -55,7 +55,7 @@ function opDebounce(func, wait, options = {}) {
     };
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
-    if (!options.leading) {
+    if (options.trailing) {
       func.apply(context, args);
     }
   };
