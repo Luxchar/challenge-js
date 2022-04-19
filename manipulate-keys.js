@@ -42,13 +42,10 @@ function mapKeys(cart, callback) {
 function reduceKeys(cart, callback) {
     let newCart = '';
     for (let key in cart) {
-        console.log(newCart)
         newCart += callback(key,'');
     }
-    return newCart.substring(0, newCart.length - 2);     
+    return newCart;     
 }
-// const nutrients = {}
-// console.log(reduceKeys(nutrients, (acc, cr) => acc.concat(', ', cr)),'vinegar, sugar, oil, onion, garlic, paprika',)
 // const empty = {}
-// console.log( reduceKeys(empty, (acc, cr) => `${acc}${cr}:`, ':'),
-// ':vinegar:sugar:oil:onion:garlic:paprika:')
+// console.log(reduceKeys(empty, (acc, cr) => acc.concat(', ', cr)),'vinegar, sugar, oil, onion, garlic, paprika',)
+// console.log(reduceKeys(empty, (acc, cr) => `${acc}${cr}:`, ':'),':vinegar:sugar:oil:onion:garlic:paprika:',)
