@@ -49,7 +49,3 @@ function reduceKeys(cart, callback) {
     }
     return newCart.substring(0, newCart.length - 2);     
 }
-const empty = {}
-console.log(reduceKeys(empty, (acc, cr) => acc.concat(', ', cr)),'vinegar, sugar, oil, onion, garlic, paprika',)
-console.log(reduceKeys(empty, (acc, cr) => `${acc}${cr}:`, ':'),':vinegar:sugar:oil:onion:garlic:paprika:',)
-console.log(reduceKeys(empty, join, null),'tomato:vinegar:oil:onion:garlic:paprika:sugar:orange',)
