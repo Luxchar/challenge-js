@@ -44,5 +44,9 @@ function reduceKeys(cart, callback) {
     for (let key in cart) {
         total = callback(total, key);
     }
-    return total.substring(1, total.length);
+    return total.substring(2, total.length);
 }
+
+// console.log(reduceKeys(ctx.cart, (acc, cr) => acc.concat(', ', cr)),
+// 'vinegar, sugar, oil, onion, garlic, paprika',
+// )
