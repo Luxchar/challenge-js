@@ -39,12 +39,18 @@ function mapKeys(cart, callback) {
     return newCart;
 }
 
-function reduceKeys(cart, callback) {
-    let newCart = '';
+function reduceKeys(cart, callback, start = '') {
+    let total = '';
     for (let key in cart) {
-        newCart = callback(newCart,key);
+        total = callback(total, key);
     }
-    return newCart;   
+    if (total[0] === ',') {
+        return total.substring(2);
+    }
+    if (start === null) {
+        return total.substring(0, total.length - 1);
+    }
+    return start+total;
 }
 // const nutritionDB = {
 //     tomato:  { calories: 18,  protein: 0.9,   carbs: 3.9,   sugar: 2.6, fiber: 1.2, fat: 0.2   },
