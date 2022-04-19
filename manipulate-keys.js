@@ -44,7 +44,7 @@ function reduceKeys(cart, callback) {
     for (let key in cart) {
         newCart += callback(key,'');
     }
-    return newCart;     
+    return newCart.substring(0, newCart.length - 2);     
 }
 // const empty = {}
 // console.log(reduceKeys(empty, (acc, cr) => acc.concat(', ', cr)),'vinegar, sugar, oil, onion, garlic, paprika',)
