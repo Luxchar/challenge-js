@@ -47,3 +47,8 @@ function reduceKeys(cart, callback) {
     }
     return newCart.substring(0, newCart.length - 2);     
 }
+// const nutrients = {}
+// console.log(reduceKeys(nutrients, (acc, cr) => acc.concat(', ', cr)),'vinegar, sugar, oil, onion, garlic, paprika',)
+// const empty = {}
+// console.log( reduceKeys(empty, (acc, cr) => `${acc}${cr}:`, ':'),
+// ':vinegar:sugar:oil:onion:garlic:paprika:')
