@@ -47,7 +47,7 @@ function reduceKeys(cart, callback, start = '') {
     if (total[0] === ',') {
         return total.substring(2);
     }
-    if (start === null || start === undefined) {
+    if (start === null || start === '') {
         return total.substring(1, total.length);
     }
     return start+total;
