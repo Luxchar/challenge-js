@@ -44,5 +44,5 @@ function reduceKeys(cart, callback) {
     for (let key in cart) {
         total = callback(total, key);
     }
-    return total.substring(2, total.length);
+    return total.substring(1, total.length);
 }
