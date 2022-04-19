@@ -40,13 +40,9 @@ function mapKeys(cart, callback) {
 }
 
 function reduceKeys(cart, callback) {
-    let total = '';
+    let newCart = '';
     for (let key in cart) {
-        total = callback(total, key);
+        newCart += callback(key);
     }
-    return total.substring(2, total.length);
+    return newCart;
 }
-
-// console.log(reduceKeys(ctx.cart, (acc, cr) => acc.concat(', ', cr)),
-// 'vinegar, sugar, oil, onion, garlic, paprika',
-// )
