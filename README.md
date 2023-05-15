@@ -7,7 +7,7 @@
 - [License](#license)
 
 ## Introduction
-This is a Piscine of Javascript made at Paris Ynov Campus, bonjour aux étudiants qui s'inspirent !
+This is a Piscine of Javascript that i did at Paris Ynov Campus, bonjour aux étudiants qui s'inspirent !
 
 ## Installation
 Make sure you have **javascript**
